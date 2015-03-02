@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  phone: MyString
+  status: MyString
+  delivery: 2015-03-02
+  amount: MyString
+  advance: MyString
+  totalitems: 1
+
+two:
+  name: MyString
+  phone: MyString
+  status: MyString
+  delivery: 2015-03-02
+  amount: MyString
+  advance: MyString
+  totalitems: 1
