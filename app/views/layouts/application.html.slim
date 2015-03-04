@@ -7,4 +7,18 @@ html
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   body
+    .navbar.navbar-default.navbar-fixed-top role="navigation"
+      .container
+        .navbar-header
+          button.navbar-toggle.collapsed data-target=".navbar-collapse" data-toggle="collapse" type="button"
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          = link_to 'SimpleDry', root_path, class: 'navbar-brand', id:'brand'
+        .navbar-collapse.collapse
+          ul.nav.navbar-nav
+
+             
+
     = yield
