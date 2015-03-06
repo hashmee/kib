@@ -24,6 +24,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'devise'
 gem 'twitter-bootswatch-rails', :github => 'scottvrosenthal/twitter-bootswatch-rails'
+gem 'twitter-bootstrap-rails'
 gem 'therubyracer'
 gem 'bootstrap-sass'
 gem 'slim-rails'
@@ -49,7 +50,7 @@ group :development, :test do
   gem 'pry'
   gem 'pry-nav'
   gem 'pry-rails'
-  gem 'twitter-bootstrap-rails'
+  
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   gem 'foreman'
