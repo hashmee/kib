@@ -23,9 +23,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'devise'
-gem 'twitter-bootswatch-rails', :github => 'scottvrosenthal/twitter-bootswatch-rails'
-gem 'twitter-bootstrap-rails'
-gem 'therubyracer'
+#gem 'twitter-bootswatch-rails', :github => 'scottvrosenthal/twitter-bootswatch-rails'
 gem 'bootstrap-sass'
 gem 'slim-rails'
 gem 'simple_form', git: 'git://github.com/plataformatec/simple_form.git'
@@ -33,7 +31,13 @@ gem 'autoprefixer-rails'
 gem 'stalker'
 gem 'turbolinks'
 gem 'thin'
+
+
+group :assets do
+gem 'therubyracer'
+gem 'twitter-bootstrap-rails'
 gem 'less-rails'
+end
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

@@ -6,15 +6,6 @@ GIT
       actionpack (~> 4.0)
       activemodel (~> 4.0)
 
-GIT
-  remote: git://github.com/scottvrosenthal/twitter-bootswatch-rails.git
-  revision: 665bcc304ae902c9fbabc7147bf6cd35954859f1
-  specs:
-    twitter-bootswatch-rails (3.3.2.0)
-      execjs (~> 2.3)
-      less-rails (~> 2.4)
-      railties (>= 3.1, < 5.0)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -272,6 +263,5 @@ DEPENDENCIES
   thin
   turbolinks
   twitter-bootstrap-rails
-  twitter-bootswatch-rails!
   uglifier (>= 1.3.0)
   web-console (~> 2.0)
