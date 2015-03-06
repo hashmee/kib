@@ -14,8 +14,13 @@
  *
  *
  *= require_self
+ *= require bootstrap_and_overrides
  */
  /* User sign in and sign forms. */
+ body  {
+  padding-top: 60px;
+}
+ 
 .border-form-div {
   max-width: 300px;
   padding: 19px 29px 29px;

@@ -35,7 +35,7 @@ gem 'thin'
 
 group :assets do
 gem 'therubyracer'
-gem 'twitter-bootstrap-rails'
+gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 gem 'less-rails'
 end
 
