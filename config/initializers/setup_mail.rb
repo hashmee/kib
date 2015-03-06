@@ -4,7 +4,7 @@
       ActionMailer::Base.smtp_settings = {
           :address => "smtp.gmail.com",
           :port => "587",
-          :domain => "heroku.com",
+          :domain => "gmail.com",
           :enable_starttls_auto => true,
           :authentication => :plain,
           :user_name => "simpledryapp@gmail.com",
