@@ -32,11 +32,12 @@ gem 'autoprefixer-rails'
 gem 'stalker'
 gem 'turbolinks'
 gem 'thin'
+gem 'less-rails'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
-# Use Unicorn as the app server
+# Use Unicorn as the app server`
 # gem 'unicorn'
 
 # Use Capistrano for deployment
@@ -51,7 +52,7 @@ group :development, :test do
   gem 'twitter-bootstrap-rails'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
-
+  gem 'foreman'
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
 
