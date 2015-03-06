@@ -19,6 +19,37 @@ html
         .navbar-collapse.collapse
           ul.nav.navbar-nav
 
-             
+          ul.nav.navbar-nav
+            - if user_signed_in?
+              li 
+                = link_to 'Contacts', bills_path
+              li
+                = link_to 'Groups', bills_path
+              li
+                = link_to 'Messages', bills_path
+              li
+                a href= "#{bills_path}"  
+                  | credits:
+                  /!- current_user.settings.all.each do |setting|
+                  span.badge #{current_user}
+              ul.nav.navbar-nav.navbar-right
+                li.dropdown
+                  = link_to '#', class: 'dropdown-toggle', "data-toggle" => 'dropdown' do
+                    = current_user.email
+                    span.caret
+                  ul.dropdown-menu
+                    li= link_to 'Edit Account', edit_user_registration_path
+                    li= link_to "Logout", destroy_user_session_path
+            - else
+              ul.nav.navbar-nav.navbar-right
+                li 
+                  = link_to 'Sign in', new_user_session_path
+                li
+                  = link_to 'Sign up', new_user_registration_path
 
+
+             
+  .container  
+    =bootstrap_flash
     = yield
+    script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.2/js/bootstrap.min.js"
