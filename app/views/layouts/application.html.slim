@@ -22,20 +22,20 @@ html
           ul.nav.navbar-nav
             - if user_signed_in?
               li 
-                = link_to 'Contacts', bills_path
+                = link_to 'bills', bills_path
               li
-                = link_to 'Groups', bills_path
+                = link_to 'bills', bills_path
               li
-                = link_to 'Messages', bills_path
+                = link_to 'bills', bills_path
               li
                 a href= "#{bills_path}"  
                   | credits:
                   /!- current_user.settings.all.each do |setting|
-                  span.badge #{current_user}
+                  span.badge #{current_user.id}
               ul.nav.navbar-nav.navbar-right
                 li.dropdown
                   = link_to '#', class: 'dropdown-toggle', "data-toggle" => 'dropdown' do
-                    = current_user.email
+                    = current_user.email.split("@")[0].capitalize
                     span.caret
                   ul.dropdown-menu
                     li= link_to 'Edit Account', edit_user_registration_path
