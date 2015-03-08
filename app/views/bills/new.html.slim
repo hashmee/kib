@@ -1,0 +1,13 @@
+= simple_form_for(@bill) do |f|
+  =f.input :name
+  =f.input :phone 
+  =f.input :status
+  =f.input :delivery
+  =f.input :amount
+  =f.input :advance
+  =f.input :totalitems
+
+  
+  =f.fields_for :items do |builder|
+    = builder.input :article 	
+  =f.button :submit, class: 'btn-btn warning'

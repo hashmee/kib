@@ -1,1 +1,7 @@
-h1 I want to make this to nested forms and want to explore more
+h1 
+  = link_to '+Bill', new_bill_path, class: 'btn-btn-warning' 
+  br/
+  -@bills.each do |bill|
+    = link_to bill.name, bill_path(bill)
+    br/
+    

@@ -5,11 +5,12 @@ class BillsController < ApplicationController
   end
   
   def new
-    @bill = current_user.bill.new
+    @bill = current_user.bills.new
+    2.times {@bill.items.build}
   end
 
   def create
-    @bill = current_user.bill.new(bill_params)
+    @bill = current_user.bills.new(bill_params)
     if @bill.save
     redirect_to bills_path , notice: "Bill created successfully" 
   else
@@ -26,9 +27,16 @@ class BillsController < ApplicationController
   end
   
   def update
+    if @bill.update_attributes(bill_params)
+      redirect_to bills_path, notice: "Bill Updated Successfully"
+    else
+      render "edit"
+    end
   end
 
   def destroy
+    @bill.destroy
+    redirect_to bills_path , notice: "Bill destroyed successfully"
   end
 
 private
@@ -38,7 +46,7 @@ def get_bill
   end  
 
   def bill_params
-    params.require (:bill).permit(:name, :phone, :status, :delivery, :amount, :advance, :totalitems, :user_id)
+    params.require(:bill).permit(:name, :phone, :status, :delivery, :amount, :advance, :totalitems, :user_id)
     
   end
 

@@ -1,0 +1,7 @@
+h1
+  = @bill.phone
+  br/
+  = @bill.status
+  br/
+  = @bill.items.each do |item|
+    = item.article
