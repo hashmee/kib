@@ -1,7 +1,32 @@
-h1 
-  = link_to '+Bill', new_bill_path, class: 'btn-btn-warning' 
-  br/
-  -@bills.each do |bill|
-    = link_to bill.name, bill_path(bill)
-    br/
+.container
+  .row
+    table.table.non-fluid
+      thead	
+        tr
+          th Name
+          th Phone
+          th Status
+          th Price
+          th Advance
+          th Delivery
+          th
+            = link_to '+Bill', new_bill_path, :class => "btn-btn-warning btn-lg btn-block"
+      tbody
+        tr
+          - @bills.each do |bill|
+            tr
+              td = bill.name
+              td = bill.phone
+              td = bill.status
+              td = bill.amount
+              td = bill.advance
+              td = bill.delivery
+              td 
+
+
+
+
+
+
+
     

@@ -32,7 +32,7 @@ class ItemsController < ApplicationController
     @item = current_user.items.find(params[:id])
   end
   def item_params
-    params.require (:item).permit(:counter, :article, :color, :remarks, :user_id)
+    params.require (:item).permit(:counter, :article, :color, :remarks, :user_id, :bill_id)
   end
 
 end

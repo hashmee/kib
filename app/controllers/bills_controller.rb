@@ -11,6 +11,7 @@ class BillsController < ApplicationController
 
   def create
     @bill = current_user.bills.new(bill_params)
+    binding.pry
     if @bill.save
     redirect_to bills_path , notice: "Bill created successfully" 
   else
@@ -46,7 +47,11 @@ def get_bill
   end  
 
   def bill_params
-    params.require(:bill).permit(:name, :phone, :status, :delivery, :amount, :advance, :totalitems, :user_id)
+    params.require(:bill).permit(:name, :phone, :status, 
+                                 :delivery, :amount, :advance, 
+                                 :totalitems, :user_id).tap do |whitelisted|
+  whitelisted[:items_attributes ] = params[:bill][:items_attributes ]
+end
     
   end
 
