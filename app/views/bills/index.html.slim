@@ -1,31 +1,30 @@
 .container
   .row
-    table.table.non-fluid
-      thead	
-        tr
-          th Name
-          th Phone
-          th Status
-          th Price
-          th Advance
-          th Delivery
-          th
-            = link_to '+Bill', new_bill_path, :class => "btn-btn-warning btn-lg btn-block"
-      tbody
-        tr
-          - @bills.each do |bill|
-            tr
-              td = bill.name
-              td = bill.phone
-              td = bill.status
-              td = bill.amount
-              td = bill.advance
-              td = bill.delivery
-              td 
-
-
-
-
+    .col-md-10
+	    table.table.non-fluid
+	      thead	
+	        tr
+	          th Id
+	          th Name
+	          th Phone
+	          th Status
+	          th Price
+	          th Advance
+	          th Delivery
+	          th
+	            = link_to '+Bill', new_bill_path , :class => "btn btn-primary btn-lg btn-block"
+	      tbody
+	        tr
+	          - @bills.each do |bill|
+	            tr
+	              td = bill.id
+	              td = link_to bill.name, bill_path(bill), :class => "btn btn-info btn-sm"
+	              td = bill.phone
+	              td = bill.status
+	              td = bill.amount
+	              td = bill.advance
+	              td = bill.delivery
+	              td
 
 
 

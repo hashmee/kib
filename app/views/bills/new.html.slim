@@ -1,13 +1,16 @@
-= simple_form_for(@bill) do |f|
-  =f.input :name
-  =f.input :phone 
-  =f.input :status
-  =f.input :delivery
-  =f.input :amount
-  =f.input :advance
-  =f.input :totalitems
-
-  
-  =f.fields_for :items do |builder|
-    = builder.input :article 	
-  =f.button :submit, class: 'btn-btn warning'
+.container
+.row
+  = simple_form_for(@bill) do |f|
+    .col-xs-4
+      =f.input :name
+      =f.input :phone 
+      =f.input :amount
+      =f.input :advance
+    .col-xs-4
+      =f.input :status
+      =f.input :delivery, :class => "date"
+      =f.input :totalitems
+    .col-xs-4
+      =f.fields_for :items do |builder|
+        = builder.input :article  
+      =f.button :submit, :class =>  'btn-btn warning'
